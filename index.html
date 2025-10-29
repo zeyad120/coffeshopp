@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Els2a Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Top Banner -->
+  <div class="top-banner" role="status" aria-live="polite" dir="rtl">
+    <div class="scroll-wrapper">
+      <div class="scroll-text">Els2a Store — استمتع بأجود أنواع القهوة المختارة بعناية.     Els2a Store — استمتع بأجود أنواع القهوة المختارة بعناية.</div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <button class="hamburger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="brand">
+        <a href="index.html" class="logo-wrap" aria-label="الانتقال للرئيسية">
+          <img id="brandLogo" src="images/logo.png" alt="Els2a Store logo" class="logo-img" />
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <ul class="nav-list">
+          <li><a href="turkish.html">بن تركي</a></li>
+          <li><a href="espresso.html">اسبريسو</a></li>
+          <li><a href="nescafe.html">نسكافيه</a></li>
+          <li><a href="flavors.html">قهوة نكهات</a></li>
+          <li><a href="equipments.html">مكن قهوة ومطاحن</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <form class="search" role="search">
+          <input type="search" placeholder="البحث عن المنتجات" aria-label="بحث" />
+          <button type="submit" aria-label="بحث">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+        </form>
+        <button class="cart" aria-label="سلة المشتريات">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 6h15l-1.5 8.5a2 2 0 0 1-2 1.6H9.2a2 2 0 0 1-2-1.6L5 3H2" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="20" r="1.5" fill="#1A1A1A"/>
+            <circle cx="17" cy="20" r="1.5" fill="#1A1A1A"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <nav class="mobile-nav" aria-label="القائمة الجانبية">
+        <ul class="mobile-nav-list">
+          <li><a href="turkish.html">بن تركي</a></li>
+          <li><a href="espresso.html">اسبريسو</a></li>
+          <li><a href="nescafe.html">نسكافيه</a></li>
+          <li><a href="flavors.html">قهوة نكهات</a></li>
+          <li><a href="equipments.html">مكن قهوة ومطاحن</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-controls">
+        <form class="search" role="search">
+          <input type="search" placeholder="البحث عن المنتجات" aria-label="بحث" />
+          <button type="submit" aria-label="بحث">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 21l-4.35-4.35" stroke="#356B2B" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="11" cy="11" r="7" stroke="#356B2B" stroke-width="2"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero hero-image-only">
+    <img
+      src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=70&w=900&auto=format&fit=crop"
+      alt="صورة قهوة"
+      class="hero-image"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="products-section">
+    <div class="container">
+      <h2 class="section-title">منتجاتنا</h2>
+      <div class="products-grid">
+        <!-- Card 1 -->
+        <article class="product-card reveal" tabindex="0" data-id="t1" data-name="قهوة تركي فاخرة" data-price="235" data-img="">
+          <div class="product-image" aria-hidden="true">
+            <svg viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="bagGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#cbb59d"/>
+                  <stop offset="100%" stop-color="#b9a189"/>
+                </linearGradient>
+              </defs>
+              <rect x="40" y="20" width="160" height="140" rx="10" fill="url(#bagGrad)" stroke="#b29a82"/>
+              <rect x="60" y="44" width="120" height="28" rx="6" fill="currentColor" opacity="0.9"/>
+              <rect x="70" y="88" width="100" height="58" rx="8" fill="#f8f5f1" stroke="#e6dccf"/>
+            </svg>
+          </div>
+          <h3 class="product-name">قهوة تركي فاخرة</h3>
+          <p class="product-desc">محمصة بعناية لنكهة متوازنة وغنية.</p>
+          <div class="product-meta">
+            <span class="product-price">235 جنيه</span>
+            <button class="add-btn" aria-label="أضف قهوة تركي فاخرة إلى السلة">أضف إلى السلة</button>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="product-card reveal" tabindex="0" data-id="e1" data-name="حبوب اسبريسو مميزة" data-price="289" data-img="">
+          <div class="product-image" aria-hidden="true">
+            <svg viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="20" width="160" height="140" rx="10" fill="#b4835b"/>
+              <circle cx="120" cy="90" r="48" fill="#6b4226"/>
+              <rect x="80" y="48" width="80" height="22" rx="6" fill="#f2e9df"/>
+            </svg>
+          </div>
+          <h3 class="product-name">حبوب اسبريسو مميزة</h3>
+          <p class="product-desc">قوام مخملي مع روائح شوكولاتة.</p>
+          <div class="product-meta">
+            <span class="product-price">289 جنيه</span>
+            <button class="add-btn" aria-label="أضف حبوب اسبريسو مميزة إلى السلة">أضف إلى السلة</button>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="product-card reveal" tabindex="0" data-id="b1" data-name="باقة القهوة المختارة" data-price="349" data-img="">
+          <div class="product-image" aria-hidden="true">
+            <svg viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="30" width="160" height="120" rx="16" fill="#d8c6b3"/>
+              <rect x="70" y="48" width="100" height="22" rx="6" fill="currentColor"/>
+              <circle cx="120" cy="110" r="24" fill="#6b4226"/>
+            </svg>
+          </div>
+          <h3 class="product-name">باقة القهوة المختارة</h3>
+          <p class="product-desc">تشكيلة متنوعة تناسب جميع الأذواق.</p>
+          <div class="product-meta">
+            <span class="product-price">349 جنيه</span>
+            <button class="add-btn" aria-label="أضف باقة القهوة المختارة إلى السلة">أضف إلى السلة</button>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="product-card reveal" tabindex="0" data-id="a1" data-name="قهوة عربي" data-price="225" data-img="">
+          <div class="product-image" aria-hidden="true">
+            <svg viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+              <rect x="60" y="20" width="120" height="140" rx="14" fill="#e7ddd1" stroke="#d8cfc4"/>
+              <rect x="75" y="44" width="90" height="26" rx="6" fill="currentColor"/>
+              <rect x="75" y="90" width="90" height="50" rx="8" fill="#fff" stroke="#efebe6"/>
+            </svg>
+          </div>
+          <h3 class="product-name">قهوة عربي</h3>
+          <p class="product-desc">مزيج كلاسيكي بطابع عربي أصيل.</p>
+          <div class="product-meta">
+            <span class="product-price">225 جنيه</span>
+            <button class="add-btn" aria-label="أضف قهوة عربي إلى السلة">أضف إلى السلة</button>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="product-card reveal" tabindex="0" data-id="c1" data-name="قهوة باردة" data-price="179" data-img="">
+          <div class="product-image" aria-hidden="true">
+            <svg viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="34" width="160" height="112" rx="10" fill="#ccb19a"/>
+              <rect x="70" y="52" width="100" height="24" rx="6" fill="currentColor"/>
+              <rect x="70" y="92" width="100" height="40" rx="6" fill="#f8f5f1"/>
+            </svg>
+          </div>
+          <h3 class="product-name">قهوة باردة</h3>
+          <p class="product-desc">انتعاش بطعم قهوة غني ومركز.</p>
+          <div class="product-meta">
+            <span class="product-price">179 جنيه</span>
+            <button class="add-btn" aria-label="أضف قهوة باردة إلى السلة">أضف إلى السلة</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sticky Cart Button and Cart Panel -->
+  <button id="stickyCart" class="sticky-cart" aria-haspopup="dialog" aria-expanded="false" aria-controls="cartPanel">
+    <span class="icon" aria-hidden="true">🛒</span>
+    <span class="label">السلة</span>
+    <span id="cartBadge" class="badge">0</span>
+  </button>
+
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
+  <aside id="cartPanel" class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="cart-header">
+      <h3 id="cartTitle" class="cart-title">سلة المشتريات</h3>
+      <button id="closeCart" class="cart-close" aria-label="إغلاق">✕</button>
+    </div>
+    <div id="cartContent" class="cart-content">
+      <div class="cart-empty">سلتك فارغة</div>
+    </div>
+    <div class="cart-footer">
+      <div class="payment">
+        <h4 class="payment-title">طرق الدفع</h4>
+        <div class="payment-methods">
+          <label class="pm"><input type="radio" name="payMethod" value="vodafone" checked> <span>Vodafone Cash</span></label>
+          <label class="pm"><input type="radio" name="payMethod" value="visa"> <span>Visa</span></label>
+        </div>
+        <div class="payment-fields" id="payFields">
+          <div class="pf" data-for="vodafone">
+            <input id="vfPhone" type="tel" inputmode="numeric" placeholder="رقم فودافون كاش" />
+          </div>
+          <div class="pf" data-for="visa" hidden>
+            <input id="cardNumber" type="text" inputmode="numeric" maxlength="19" placeholder="رقم البطاقة" />
+            <div class="row">
+              <input id="cardExpiry" type="text" inputmode="numeric" maxlength="5" placeholder="MM/YY" />
+              <input id="cardCvv" type="password" inputmode="numeric" maxlength="4" placeholder="CVV" />
+            </div>
+          </div>
+        </div>
+        <p class="payment-note">الدفع محاكى لأغراض العرض فقط — لن يتم خصم أي مبالغ فعلية.</p>
+        <textarea id="customerNote" class="customer-note" placeholder="ملاحظاتك على الطلب (اختياري)"></textarea>
+      </div>
+      <div class="total">
+        <span>الإجمالي</span>
+        <span id="cartTotal">0 جنيه</span>
+      </div>
+      <button id="checkoutBtn" class="btn-primary">إتمام الشراء</button>
+      <button id="clearBtn" class="btn-secondary">إفراغ السلة</button>
+      <button id="buyNowBtn" class="btn-primary" aria-label="اشتري الآن">اشتري الآن</button>
+    </div>
+  </aside>
+
+  <!-- Floating Messenger button -->
+  <a class="messenger-fab" href="https://m.me/yourpage" target="_blank" rel="noopener" aria-label="تواصل عبر ماسنجر">
+    <img src="images/messenger-logo.jpg" alt="Messenger" />
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer reveal" dir="rtl">
+    <div class="container footer-grid">
+      <!-- Column 1: Logo + description -->
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Els2a Store" class="footer-logo" />
+          <h3 class="footer-title">Els2a Store</h3>
+        </div>
+        <p class="footer-desc">Els2a Store — استمتع بأجود أنواع القهوة المختارة بعناية.</p>
+      </div>
+
+      <!-- Column 4: Social -->
+      <div class="footer-col">
+        <h4 class="footer-heading">تابعنا</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook" class="social-btn">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+              <path d="M13.5 8H16V5h-2.5C11.6 5 11 6.2 11 7.8V9H9v3h2v7h3v-7h2.2l.3-3H14v-1c0-.6.2-1 .8-1Z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-btn">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor"/>
+              <circle cx="12" cy="12" r="4" stroke="currentColor"/>
+              <circle cx="17" cy="7" r="1.2" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="WhatsApp" class="social-btn">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+              <path d="M20.5 11.5A8.5 8.5 0 1 1 5.1 18.7L4 21l2.4-1a8.5 8.5 0 0 0 14.1-8.5Z" stroke="currentColor"/>
+              <path d="M8.8 8.9c-.2-.5-.4-.5-.6-.5h-.5c-.1 0-.4.1-.6.3-.2.3-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.6 4 3.6 2 .8 2.4.7 2.8.6.4-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.2-1.2 0-.1-.1-.2-.3-.3l-1.1-.5c-.1 0-.3-.1-.5.1-.2.3-.7 1-.8 1.1-.2.1-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.4.1-.5.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.5-1.2Z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2025 Els2a Store - جميع الحقوق محفوظة</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

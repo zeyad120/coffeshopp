@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>قهوة نكهات - Els2a Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <script defer src="categories.js"></script>
+</head>
+<body data-category="flavors">
+  <div class="top-banner" role="status" aria-live="polite" dir="rtl">
+    <div class="scroll-wrapper">
+      <div class="scroll-text">اشحن مجاني عند شرائك بقيمة 1000 جنيه أو أكثر | خصم 10% على أول طلب | قهوة طازجة كل يوم</div>
+    </div>
+  </div>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <button class="hamburger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="brand">
+        <a href="index.html" class="logo-wrap" aria-label="الانتقال للرئيسية">
+          <img id="brandLogo" src="images/logo.png" alt="Els2a Store" class="logo-img" />
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <ul class="nav-list">
+          <li><a href="turkish.html">بن تركي</a></li>
+          <li><a href="espresso.html">اسبريسو</a></li>
+          <li><a href="nescafe.html">نسكافيه</a></li>
+          <li><a href="flavors.html">قهوة نكهات</a></li>
+                    <li><a href="equipments.html">مكن قهوة ومطاحن</a></li>
+
+        </ul>
+      </nav>
+      <div class="actions">
+        <form class="search" role="search">
+          <input type="search" placeholder="البحث عن المنتجات" aria-label="بحث" />
+          <button type="submit" aria-label="بحث">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+        </form>
+        <button class="cart" aria-label="سلة المشتريات">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 6h15l-1.5 8.5a2 2 0 0 1-2 1.6H9.2a2 2 0 0 1-2-1.6L5 3H2" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="20" r="1.5" fill="#1A1A1A"/>
+            <circle cx="17" cy="20" r="1.5" fill="#1A1A1A"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobileMenu" class="mobile-menu" hidden>
+    <nav class="mobile-nav" aria-label="القائمة">
+      <ul class="mobile-nav-list">
+        <li><a href="turkish.html">بن تركي</a></li>
+        <li><a href="espresso.html">اسبريسو</a></li>
+        <li><a href="nescafe.html">نسكافيه</a></li>
+        <li><a href="flavors.html">قهوة نكهات</a></li>
+        <li><a href="equipments.html">مكن قهوة ومطاحن</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="products-section">
+    <div class="container">
+      <nav aria-label="breadcrumb" style="margin-bottom:12px;color:#555;font-weight:600;">
+        <a href="index.html">الصفحة الرئيسية</a> > <span>قهوة نكهات</span>
+      </nav>
+      <h2 class="section-title">قهوة نكهات</h2>
+      <div id="productsGrid" class="products-grid"></div>
+    </div>
+  </main>
+
+  <button id="stickyCart" class="sticky-cart" aria-haspopup="dialog" aria-expanded="false" aria-controls="cartPanel">
+    <span class="icon" aria-hidden="true">🛒</span>
+    <span class="label">السلة</span>
+    <span id="cartBadge" class="badge">0</span>
+  </button>
+
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
+  <aside id="cartPanel" class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="cart-header">
+      <h3 id="cartTitle" class="cart-title">سلة المشتريات</h3>
+      <button id="closeCart" class="cart-close" aria-label="إغلاق">✕</button>
+    </div>
+    <div id="cartContent" class="cart-content">
+      <div class="cart-empty">سلتك فارغة</div>
+    </div>
+    <div class="cart-footer">
+      <div class="payment">
+        <h4 class="payment-title">طرق الدفع</h4>
+        <div class="payment-methods">
+          <label class="pm"><input type="radio" name="payMethod" value="vodafone" checked> <span>Vodafone Cash</span></label>
+          <label class="pm"><input type="radio" name="payMethod" value="visa"> <span>Visa</span></label>
+        </div>
+        <div class="payment-fields" id="payFields">
+          <div class="pf" data-for="vodafone">
+            <input id="vfPhone" type="tel" inputmode="numeric" placeholder="رقم فودافون كاش" />
+          </div>
+          <div class="pf" data-for="visa" hidden>
+            <input id="cardNumber" type="text" inputmode="numeric" maxlength="19" placeholder="رقم البطاقة" />
+            <div class="row">
+              <input id="cardExpiry" type="text" inputmode="numeric" maxlength="5" placeholder="MM/YY" />
+              <input id="cardCvv" type="password" inputmode="numeric" maxlength="4" placeholder="CVV" />
+            </div>
+          </div>
+        </div>
+        <p class="payment-note">الدفع محاكى لأغراض العرض فقط — لن يتم خصم أي مبالغ فعلية.</p>
+        <textarea id="customerNote" class="customer-note" placeholder="ملاحظاتك على الطلب (اختياري)"></textarea>
+      </div>
+      <div class="total">
+        <span>الإجمالي</span>
+        <span id="cartTotal">0 جنيه</span>
+      </div>
+      <button id="checkoutBtn" class="btn-primary">إتمام الشراء</button>
+      <button id="clearBtn" class="btn-secondary">إفراغ السلة</button>
+      <button id="buyNowBtn" class="btn-primary" aria-label="اشتري الآن">اشتري الآن</button>
+    </div>
+  </aside>
+
+  <a class="messenger-fab" href="https://m.me/yourpage" target="_blank" rel="noopener" aria-label="تواصل عبر ماسنجر">
+    <img src="images/messenger-logo.jpg" alt="Messenger" />
+  </a>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function(){
+      if (window.CategoryPages) {
+        window.CategoryPages.highlightActiveNav();
+        window.CategoryPages.renderCategoryPage();
+      }
+    });
+  </script>
+</body>
+</html>
